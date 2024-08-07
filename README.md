@@ -30,10 +30,12 @@ Este proyecto es un programa para gestionar y mover archivos de mods entre la ca
 
 1. Cambia los directorios de las variables `ACTIVEFOLDER` por el directorio en el cual el juego cargue los mods, y cambia el directorio de `OTHERFOLDERS` a una carpeta en la cual quieras guardar los otros mods.
 
-2. Ejecuta el script principal:
+2. En el archivo `functions.py` se encuentra una tupla con las extensiones de los mods, si tus mods tienen otra extension, modifica la tupla.
+
+3. Ejecuta el script principal:
 
    ```bash
    python app.py
    ```
 
-3. Sigue las instrucciones del menú para gestionar tus mods.
+4. Sigue las instrucciones del menú para gestionar tus mods.

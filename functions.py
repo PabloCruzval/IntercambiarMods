@@ -4,6 +4,9 @@ import shutil
 import time
 
 
+mods_file_extension = ('.jar', '.esp', '.test')
+
+
 def get_name(dir_: Path):
     """ Obtener el nombre del archivo 'pack.sav' en el directorio"""
     files = os.listdir(dir_)
@@ -18,7 +21,7 @@ def get_status(dir_: Path):
     """ Se comprueba si el directorio tiene el archivo 'pack.sav' y/o mods """
     files = os.listdir(dir_)
     has_sav = any(file_.endswith('.sav') for file_ in files)
-    has_jar = any(file_.endswith('.jar') for file_ in files)
+    has_jar = any(file_.endswith(mods_file_extension) for file_ in files)
     if not has_sav and not has_jar:
         return 'N'
     return ('S' if has_sav else '') + ('J' if has_jar else '')
